@@ -26,13 +26,13 @@ for file_name in list_of_files:
         path3 = to_dir+'/'+ "Document_File"+'/'+file_name
         print("path1",path1)
         print("path3",path3)
-    if os.path.exists(path2):
-        print("Moving"+file_name+ ".....")
-        shutil.move(path1,path3)
-    else:
-        os.makedirs(path2)
-        print("Moving"+file_name+ ".....")
-        shutil.move(path1,path3)
+        if os.path.exists(path2):
+          print("Moving"+file_name+ ".....")
+          shutil.move(path1,path3)
+        else:
+          os.makedirs(path2)
+          print("Moving"+file_name+ ".....")
+          shutil.move(path1,path3)
 
 839f5aa2-a5f7-4989-8e5c-7feb91fca60c
 .pdf
